@@ -15,11 +15,15 @@ User.init(
         allowNull: false,
         primaryKey: true,
         autoIncrement: true,
-      },
-      name: {
+    },
+      first_name: {
         type: DataTypes.STRING,
         allowNull: false,
-      },
+    },
+      last_name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
       email: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -27,7 +31,11 @@ User.init(
         validate: {
           isEmail: true,
         },
-      },
+    },
+    contact_info: {
+        type: DataTypes.TEXT,
+        allowNull: true,
+    },
       password: {
         type: DataTypes.STRING,
         allowNull: false,

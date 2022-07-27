@@ -1,6 +1,8 @@
 const User = require('./User');
 const Resume = require('./Resume')
-const Template = require('./Template')
+const Employer = require('./Employer')
+const Education = require('./Education')
+
 
 User.hasMany(Resume, {
     foreignKey: 'user_id',
@@ -11,12 +13,22 @@ Resume.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
-User.hasMany(Template, {
+User.hasMany(Employer, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
+});
+
+Employer.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
-Template.belongsTo(User, {
+User.hasMany(Education, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
+})
+
+Education.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
-module.exports = { User, Resume, Template };
+module.exports = { User, Resume, Education, Employer };

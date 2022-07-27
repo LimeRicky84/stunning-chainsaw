@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Resume extends Model {}
+class Education extends Model {}
 
-Resume.init(
+Education.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -11,20 +11,24 @@ Resume.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        about: {
-            type: DataTypes.TEXT,
-            allowNull: true,    
-        },
-        skills: {
-            type: DataTypes.TEXT,
+        start_date: {
+            type: DataTypes.DATE,
             allowNull: true,
         },
-        interests: {
+        end_date: {
+            type: DataTypes.DATE,
+            allowNull: true,
+        },
+        school: {
             type: DataTypes.STRING,
             allowNull: true,
         },
-        certifications: {
-            type: DataTypes.TEXT,
+        graduate: {
+            type: DataTypes.BOOLEAN,
+            allowNull: true,
+        },
+        certificate: {
+            type: DataTypes.STRING,
             allowNull: true,
         },
     },
@@ -33,8 +37,8 @@ Resume.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'resume',
+        modelName: 'education',
     }
 )
 
-module.exports = Resume;
+module.exports = Education;

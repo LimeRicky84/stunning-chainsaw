@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Resume extends Model {}
+class Employer extends Model {}
 
-Resume.init(
+Employer.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -11,20 +11,24 @@ Resume.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        about: {
-            type: DataTypes.TEXT,
-            allowNull: true,    
-        },
-        skills: {
-            type: DataTypes.TEXT,
+        start_date: {
+            type: DataTypes.DATE,
             allowNull: true,
         },
-        interests: {
+        end_date: {
+            type: DataTypes.DATE,
+            allowNull: true,
+        },
+        company: {
             type: DataTypes.STRING,
             allowNull: true,
         },
-        certifications: {
-            type: DataTypes.TEXT,
+        title: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        duties: {
+            type: DataTypes.STRING,
             allowNull: true,
         },
     },
@@ -33,8 +37,8 @@ Resume.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'resume',
+        modelName: 'employer',
     }
 )
 
-module.exports = Resume;
+module.exports = Employer;
