@@ -53,6 +53,8 @@ router.post('/login', async (req, res) => {
     }
   });
 
+// Grant - feels like I need to add a get route for the job search page here
+
 router.post('/logout', (req, res) => {
     if (req.session.logged_in) {
       req.session.destroy(() => {

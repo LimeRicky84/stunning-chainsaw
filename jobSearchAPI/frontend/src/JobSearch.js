@@ -34,7 +34,7 @@ export class JobSearch {
             this.resultsContainer.innerHTML = '';
             const  { search, location } = extractFormData(this.searchForm);
 
-            fetch(`http://localhost:3000/?search=${search}&location=${location}&country=${this.countryCode}`)
+            fetch(`http://localhost:3001/?search=${search}&location=${location}&country=${this.countryCode}`)
                 .then(response => response.json())
                 .then(({ results }) => {
                     return results
