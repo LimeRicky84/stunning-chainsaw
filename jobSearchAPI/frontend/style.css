@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+/*Will need to change all of this to match our group project styling*/
+
+header {
+    padding: 50px;
+    background-repeat: no-repeat;
+    height: 400px;
+}
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    form {
+        margin-top: 50px;
+        max-width: 400px;
+    }
+
+.card {
+    margin: 25px 0;
+}
+
+
