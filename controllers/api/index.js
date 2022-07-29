@@ -3,6 +3,6 @@ const resumeRoutes = require('./resumeRoutes')
 const dashboardRoutes = require('./dashboardRoutes')
 
 router.use('/resume', resumeRoutes)
-router.use('./dashboardRoutes', dashboardRoutes)
+router.use('/dashboard', dashboardRoutes)
 
 module.exports = router;

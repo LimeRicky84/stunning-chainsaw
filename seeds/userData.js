@@ -6,7 +6,7 @@ const userData = [
         last_name: "Moss",
         email: "Dont@MeBro.com",
         contact_info: 345-567-9876,
-        password: "Password419",
+        password: "$2b$10$REMKGe5P0TLO0gahJ/qrcO9S.D4AU2dRVAJIPj.D5tijvp1TkaiMW",
     },
 ];
 
