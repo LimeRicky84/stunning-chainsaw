@@ -1,4 +1,4 @@
-form {
+.login {
   width: 50%;
   justify-content: center;
   margin-left: 25%;
@@ -7,3 +7,8 @@ form {
   background-color: rgb(192, 202, 202);
   
 }
+
+.top {
+  padding-left: 15px;
+}
+
