@@ -1,19 +1,15 @@
-import { getCurrencySymbol, extractFormData } from './utils.js';
-import { jobTemplate } from './templates.js';
+import { jobTemplate } from './job-search-templates.js';
+import { getCurrencySymbol, extractFormData } from './job-search-utils.js';
 
 export class JobSearch {
-    constructor(
-        searchFormSelector,
-        resultsContainerSelector,
-    ) {
-        //document is not defined error
+    constructor(searchFormSelector, resultsContainerSelector) {
         this.searchForm = document.querySelector(searchFormSelector);
         this.resultsContainer = document.querySelector(resultsContainerSelector);
     }
 
     setCountryCode() {
         this.countryCode = 'us';
-        this.setCurrencyCode();
+        this.setCurrencySymbol();
 
         fetch('http://ip-api.com/json')
         //fetch('http://ip-api.com/json/?fields=61439')
@@ -24,7 +20,7 @@ export class JobSearch {
             });
     }
 
-    setCurrencyCode() {
+    setCurrencySymbol() {
         this.currencySymbol = getCurrencySymbol(this.countryCode);
     }
 
@@ -45,4 +41,3 @@ export class JobSearch {
         });
     }
 }
-
