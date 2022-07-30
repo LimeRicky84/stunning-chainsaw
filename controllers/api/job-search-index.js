@@ -1,7 +1,7 @@
 const createServer = require('http').createServer;
 const url = require('url');
 const axios = require('axios');
-const config = require('./config');
+const config = require('./job-search-config');
 
 const headers = {
     'Content-Type': 'application/json',

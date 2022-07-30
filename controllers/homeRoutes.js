@@ -31,6 +31,16 @@ router.get('/dashboard', async (req, res) => {
     }
 })
 
+router.get('/JobSearch', async (req, res) => {
+    try {
+        console.log('there')
+        res.render('JobSearch')
+
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
 router.get('/input', async (req, res) => {
     try {
         console.log('there')
