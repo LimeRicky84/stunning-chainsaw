@@ -1,3 +1,5 @@
+const router = require('express').Router();
+const { User } = require('../../models')
 const createServer = require('http').createServer;
 const url = require('url');
 const axios = require('axios');
@@ -8,6 +10,25 @@ const headers = {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Methods': 'GET'
 };
+
+router.post('/', async (req, res) => {
+    try {
+
+    // Goal: axios request to make a request to the api to get data and return it instead of 
+        
+    //   const userData = await User.create(req.body);
+  
+    //   req.session.save(() => {
+    //     req.session.user_id = userData.id;
+    //     req.session.logged_in = true;
+  
+    //     res.status(200).json(userData);
+    //   })
+        res.status(200).json({"Success" : true})
+    } catch (err) {
+      res.status(400).json(err);
+    }
+});
 
 const decodeParams = searchParams => Array
     .from(searchParams.keys())
@@ -35,6 +56,8 @@ const server = createServer((req, res) => {
     }
 });
 
-server.listen(3000, () => {
-    console.log('I hear you');
-})
+// server.listen(3001, () => {
+//     console.log('I hear you');
+// })
+
+module.exports = router;
