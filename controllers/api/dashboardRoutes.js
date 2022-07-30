@@ -15,45 +15,64 @@ router.post('/', async (req, res) => {
       res.status(400).json(err);
     }
 });
-
+// login route
 router.post('/login', async (req, res) => {
-    console.log('here123')
-    try {
-        console.log('1')
-      const userData = await User.findOne({ where: { email: req.body.email } });
-      console.log('2')
-      if (!userData) {
-        res
-          .status(400)
-          .json({ message: 'Incorrect email or password, please try again' });
-        return;
-      }
-      console.log('3')
-      const validPassword = await userData.checkPassword(req.body.password);
-      console.log('4')
-      if (!validPassword) {
-        console.log('4.5')
-        res
-          .status(400)
-          .json({ message: 'Incorrect email or password, please try again' });
-        return;
-      }
-      console.log('5')
-      req.session.save(() => {
-        req.session.user_id = userData.id;
-        req.session.logged_in = true;
-        
-        res.json({ user: userData, message: 'You are now logged in!' });
-      });
-      console.log('6')
-    } catch (err) {
-        console.log(err.message)
-      res.status(400).json(err);
-     
+  console.log('here123')
+  try {
+      console.log('1')
+    const userData = await User.findOne({ where: { email: req.body.email } });
+    console.log('2')
+    if (!userData) {
+      res
+        .status(400)
+        .json({ message: 'Incorrect email or password, please try again' });
+      return;
     }
-  });
+    console.log('3')
+    const validPassword = await userData.checkPassword(req.body.password);
+    console.log('4')
+    if (!validPassword) {
+      console.log('4.5')
+      res
+        .status(400)
+        .json({ message: 'Incorrect email or password, please try again' });
+      return;
+    }
+    console.log('5')
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.logged_in = true;
+      
+      res.json({ user: userData, message: 'You are now logged in!' });
+    });
+    console.log('6')
+  } catch (err) {
+      console.log(err.message)
+    res.status(400).json(err);
+    
+  }
+});
+// signup route
+router.post('/signup', async (req, res) => {
+  try{
+    const signupData = User.create({
+      first_name: req.body.first_name,
+      last_name: req.body.last_name,
+      email: req.body.email,
+      contact_info: req.body.contact_info,
+      password: req.body.password
+    })
+    req.session.save(() => {
+      req.session.user_id = signupData.id;
+      req.session.logged_in = true;
 
-// Grant - feels like I need to add a get route for the job search page here
+      res.json(signupData)
+    })
+  } catch (err) {
+    res.status(400).json(err);
+  }
+})
+
 
 router.post('/logout', (req, res) => {
     if (req.session.logged_in) {
