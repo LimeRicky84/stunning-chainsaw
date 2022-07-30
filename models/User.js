@@ -46,7 +46,7 @@ User.init(
         },
     },
     contact_info: {
-        type: DataTypes.TEXT,
+        type: DataTypes.CHAR,
         allowNull: true,
     },
       password: {

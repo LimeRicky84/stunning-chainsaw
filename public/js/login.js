@@ -32,7 +32,9 @@ const signupFormHandler = async (event) => {
   const contact_info = document.querySelector('#contact_info').value.trim();
   const password = document.querySelector('#password-signup').value.trim();
 
+
   if (firstName && lastName && email && password) {
+
     const response = await fetch('/api/dashboard/signup', {
       method: 'POST',
       body: JSON.stringify({ firstName, lastName, contact_info, email, password }),
