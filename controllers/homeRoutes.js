@@ -1,10 +1,15 @@
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
 
+
+
+
 router.get('/', async (req, res) => {
     try {
         console.log('there')
-        res.render('homepage')
+        res.render('homepage', {
+            logged_in: req.session.logged_in
+          });
 
     } catch (err) {
         res.status(500).json(err);
@@ -21,10 +26,13 @@ router.get('/login', async (req, res) => {
     }
 })
 
-router.get('/dashboard', async (req, res) => {
+router.get('/dashboard', withAuth, async (req, res) => {
     try {
         console.log('there')
-        res.render('dashboard')
+        res.render('dashboard', {
+            // pass data into dashboard here
+            logged_in: req.session.logged_in
+          });
 
     } catch (err) {
         res.status(500).json(err);
@@ -60,5 +68,6 @@ router.get('/login', (req, res) => {
   
     res.render('login');
   });
+
 
 module.exports = router;
