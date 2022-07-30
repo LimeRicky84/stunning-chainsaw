@@ -29,9 +29,17 @@ export class JobSearch {
             event.preventDefault();
             this.resultsContainer.innerHTML = '';
             const  { search, location } = extractFormData(this.searchForm);
-
-            fetch(`http://localhost:3001/?search=${search}&location=${location}&country=${this.countryCode}`)
-                .then(response => response.json())
+// Fetch request post method with Brian work
+            fetch('/api/jobsearch', {
+                method: 'POST',
+                body: JSON.stringify({ search, location, countryCode:this.countryCode }),
+                headers: { 'Content-Type': 'application/json' },
+            })
+                .then(response =>
+                    {
+                        console.log(response.json())
+                        return response.json()
+                    })
                 .then(({ results }) => {
                     return results
                         .map(job => jobTemplate(job, this.currencySymbol))
