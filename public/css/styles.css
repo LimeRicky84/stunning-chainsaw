@@ -5,10 +5,36 @@
   margin-top: 8%;
   padding: 30px;
   background-color: rgb(192, 202, 202);
-  
 }
 
 .top {
   padding-left: 15px;
 }
+
+button:hover {
+  box-shadow: inset 0px 0px 8px;
+}
+
+.imgBg {
+  background-size: cover;
+  width: 125em;
+  height: 30em;
+}
+
+.img1 {
+  background-size: cover;
+  background-image: url(/images/resumetemplate1.png);
+}
+
+.img2 {
+  background-size: cover;
+  background-image: url(/images/resumetemplate2.png);
+}
+
+.img3 {
+  background-size: cover;
+  background-image: url(/images/resumetemplate3.png);
+}
+
+
 
