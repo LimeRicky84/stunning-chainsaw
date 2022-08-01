@@ -25,6 +25,14 @@
             <label for="phoneNumber" class="form-label">Phone Number</label>
             <input type="text" class="form-control" id="phoneNumber">
         </div>
+
+        <div class="col-md-6">
+            <label for="imagefile" accept="image/jpeg" id="imgaeFile">Current Photo</label>
+            <input type="file" name="imgfile" class="form-control">
+            <script src="/imageAPI/index.js" ></script> 
+
+        </div>
+        {{!-- Select a picture --}}
         <div class="col-12 form-group">
             <label for="careerSummary">Career Summary</label>
             <textarea type="text" class="form-control" id="careerSummary" rows="3"></textarea>
@@ -33,7 +41,7 @@
 
 
     <!-- Education Form-->
-    <div class="mt-2 pl-4">
+    <div class="mt-2 p-2">
         <h3>Education</h3>
     </div>
     <!-- First Education form  -->

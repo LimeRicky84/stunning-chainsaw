@@ -78,4 +78,15 @@ router.post('/logout', (req, res) => {
     }
 });
 
+router.get('/input', async (req, res) => {
+  try {
+      console.log('there')
+      res.render('input')
+
+  } catch (err) {
+      res.status(500).json(err);
+  }
+})
+
+
 module.exports = router;
