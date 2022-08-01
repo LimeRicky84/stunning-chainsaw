@@ -38,8 +38,8 @@ const server = createServer((req, res) => {
     const requestURL = url.parse(req.url);
     const decodedParams = decodeParams(new URLSearchParams(requestURL.search));
     const { search, location, country = 'us'} = decodedParams;
-
-    const targetURL = `${config.BASE_URL}/${country.toLowerCase()}/${config.BASE_PARAMS}&app_id=${config.APP_ID}&app_key=${config.API_KEY}&what=${search}&where=${location}`;
+// This is where I'm talking about in line 8 of job-search-config
+    const targetURL = `${config.BASE_URL}/${country.toLowerCase()}/${config.BASE_PARAMS}&app_id=${config.APP_ID}&app_key=${config.APP_KEY}&what=${search}&where=${location}`;
 
     if (req.method === 'GET') {
         console.log(`Proxy GET request to : ${targetURL}`);
