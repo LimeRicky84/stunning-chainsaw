@@ -1,5 +1,16 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User } = require('../models');
+
+router.get('/test', async (req, res) => {
+  console.log ('get request')
+  try {
+    const user = await User.findAll()
+    res.status(200).json(user);
+  } catch (err) {
+    console.log(err.message)
+    res.status(400).json(err);
+  }
+})
 
 router.post('/', async (req, res) => {
     try {
@@ -69,6 +80,7 @@ router.post('/signup', async (req, res) => {
 
 // /api/dashboard/logout
 router.post('/logout', (req, res) => {
+  console.log('here')
     if (req.session.logged_in) {
       req.session.destroy(() => {
         res.status(204).end();
@@ -77,16 +89,6 @@ router.post('/logout', (req, res) => {
       res.status(404).end();
     }
 });
-
-router.get('/input', async (req, res) => {
-  try {
-      console.log('there')
-      res.render('input')
-
-  } catch (err) {
-      res.status(500).json(err);
-  }
-})
 
 
 module.exports = router;
