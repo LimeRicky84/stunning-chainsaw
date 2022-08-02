@@ -62,9 +62,17 @@ router.get('/login', (req, res) => {
       res.redirect('/dashboard');
       return;
     }
-  
     res.render('login');
   });
+
+  router.get('/resume', async (req, res) => {
+    try {
+        res.render('resume')
+
+    } catch (err) {
+        res.status(500).json(err);
+    }
+  })
 
 
 module.exports = router;
