@@ -8,23 +8,16 @@ const config = require('./job-search-config');
 const headers = {
     'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'GET'
+    'Access-Control-Allow-Methods': ('GET', 'POST')
 };
 
 router.post('/', async (req, res) => {
     try {
 
-    // Goal: axios request to make a request to the api to get data and return it instead of 
-        
-    //   const userData = await User.create(req.body);
-  
-    //   req.session.save(() => {
-    //     req.session.user_id = userData.id;
-    //     req.session.logged_in = true;
-  
-    //     res.status(200).json(userData);
-    //   })
-        res.status(200).json({"Success" : true})
+    // Goal: axios request to make a request to the api to get data and return it 
+    axios.get('https://api.adzuna.com/v1/api/jobs/us/search/1?app_id=62f432ef&app_key=d515b4756dfe8a30d66c49b0177b4b21&results_per_page=20&content-type=application/json')
+    .then((res) => consol.log(res))
+    .catch((err) => console.log(err))
     } catch (err) {
       res.status(400).json(err);
     }
