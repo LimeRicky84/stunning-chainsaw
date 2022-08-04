@@ -47,6 +47,12 @@ button:hover {
   
 }
 
+#login {
+
+  box-shadow: 5px 5px 5px rgb(169, 169, 230);
+   
+}
+
 .card {
   box-shadow: 10px 5px 5px gray;
 }
