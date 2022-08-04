@@ -11,20 +11,20 @@
 
 <form class="col-12 mb-3 p-4 row g-3">
     <div class="col-md-6">
-        <label for="firstName" class="form-label">First Name</label>
+        <label for="firstName" class="form-label">First Name<span class="red"> *Required</span></label>
         <input type="text" class="form-control" id="firstName">
     </div>
     <div class="col-md-6">
-        <label for="lastName" class="form-label">Last Name</label>
+        <label for="lastName" class="form-label">Last Name<span class="red"> *Required</span></label>
         <input type="text" class="form-control" id="lastName">
     </div>
     <div class="col-md-6">
-        <label for="phoneNumber" class="form-label">Phone Number</label>
+        <label for="phoneNumber" class="form-label">Phone Number<span class="red"> *Required</span></label>
         <input type="text" class="form-control" id="phoneNumber">
     </div>
     {{!-- Website links --}}
     <div class="col-md-6">
-        <label for="email" class="form-label">Email</label>
+        <label for="email" class="form-label">Email<span class="red"> *Required</span></label>
         <input type="email" class="form-control" id="email">
     </div>
     <div class="col-md-6">
@@ -253,5 +253,6 @@
 </form>
 
 <form class="ml-3 col-12 mb-3 p-4 row g-3">
-    <a href="/resume" class="btn col-4 btn-primary">Submit</a>
+    <a href="/resume" id="submit" class="btn col-4 btn-primary">Submit</a>
+    <button type="submit" class="btn btn primary">Submit</button>
 </form>

@@ -1,44 +1,15 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const { Education } = require('../models')
 
-class Education extends Model {}
-
-Education.init(
+const educationData = [
     {
-        id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            primaryKey: true,
-            autoIncrement: true,
-        },
-        start_date: {
-            type: DataTypes.DATE,
-            allowNull: true,
-        },
-        end_date: {
-            type: DataTypes.DATE,
-            allowNull: true,
-        },
-        school: {
-            type: DataTypes.STRING,
-            allowNull: true,
-        },
-        graduate: {
-            type: DataTypes.BOOLEAN,
-            allowNull: true,
-        },
-        certificate: {
-            type: DataTypes.STRING,
-            allowNull: true,
-        },
+        start_date:	1471856624000,
+        end_date: 1526634224000,
+        school: "Leeloo Dallas Institute of Technology",
+        graduate: true,
+        certificate: "Multi-Pass",
     },
-    {
-        sequelize,
-        timestamps: false,
-        freezeTableName: true,
-        underscored: true,
-        modelName: 'education',
-    }
-)
+];
 
-module.exports = Education;
+const seedEducation = () => Education.bulkCreate(educationData);
+
+module.exports = seedEducation;

@@ -36,5 +36,8 @@ button:hover {
   background-image: url(/images/resumetemplate3.png);
 }
 
-
+.red {
+  font-size: small;
+  color: crimson;
+}
 
