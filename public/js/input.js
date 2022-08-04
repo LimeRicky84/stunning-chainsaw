@@ -50,7 +50,7 @@ const newFormHandler = async (event) => {
 
 
 
-    const response = await fetch('/api/article', {
+    const response = await fetch('/api/input/resume', {
         method: 'POST',
         body: JSON.stringify(
             { 
@@ -113,4 +113,4 @@ const newFormHandler = async (event) => {
         alert(response.statusText);
     }
 }
-document.querySelector('.new-post').addEventListener('submit', newFormHandler);
+document.querySelector('submit').addEventListener('submit', newFormHandler);
