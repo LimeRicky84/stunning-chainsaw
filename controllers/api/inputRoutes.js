@@ -1,6 +1,10 @@
 const router = require('express').Router();
 const { User } = require("../../models")
 
+router.get('/resume', async (req, res) => {
+  try {
+      res.render('resume')
+
 router.get('/test', async (req, res) => {
   console.log ('get request')
   try {
@@ -12,5 +16,10 @@ router.get('/test', async (req, res) => {
   }
 })
 
+
+  } catch (err) {
+      res.status(500).json(err);
+  }
+})
 
   module.exports = router;
