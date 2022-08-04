@@ -41,3 +41,110 @@ button:hover {
   color: crimson;
 }
 
+.btn:hover {
+  background-color: rgb(168, 195, 185);
+  transition: 0.7s;
+  
+}
+
+.card {
+  box-shadow: 10px 5px 5px gray;
+}
+
+header {
+  margin-top: 100px;
+  
+}
+
+#templates {
+ 
+
+
+
+}
+
+
+@media screen and (max-width: 576px) {
+
+  header {
+    text-align: center;
+    
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+   
+  }
+
+  .card {
+    
+    width: 80%;
+    justify-content: center;
+    text-align: center;
+    
+    
+  }
+}
+
+@media screen and (max-width: 768px ) {
+  
+  header {
+    text-align: center;
+    
+
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+   
+  }
+
+  .card {
+    
+    width: 80%;
+    justify-content: center;
+    text-align: center;
+    
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+
+  #header {
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse; 
+    justify-content: center;
+
+  }
+
+  #img {
+    flex-basis: 100%;
+  }
+
+  #section {
+    flex-basis: 100%;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+
+  .card {
+    
+    width: 80%;
+    justify-content: center;
+    text-align: center;
+    
+  }
+
+}
