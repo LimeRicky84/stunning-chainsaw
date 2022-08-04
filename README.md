@@ -30,5 +30,11 @@ Kevin Stayner, https://github.com/KStaySLC
 
 Repository for this project: https://github.com/LimeRicky84/stunning-chainsaw
 
-Deployed Page:
+Deployed Page: https://stunning-chainsaw.herokuapp.com/
+
+Reference Material Links:
+
+resume templates: https://themes.3rdwavemedia.com/bootstrap-templates/resume/orbit-free-resume-cv-bootstrap-theme-for-developers/
+
+css and bootstrap templates: https://themes.3rdwavemedia.com/
 
