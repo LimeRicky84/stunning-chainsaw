@@ -1,217 +1,255 @@
-    <main>
-        <h1 class="display-2 text-center text-dark">Input Your Information</h1>
-    </main>
+<main>
+    <h1 class="display-2 text-center text-dark">Input Your Information</h1>
+</main>
 
 
-    <!-- Personal Information Form -->
+<!-- Personal Information Form -->
+<div class="mt-2 pl-4">
+    <h3>Personal Information</h3>
+</div>
+
+<form class="col-12 mb-3 p-4 row g-3">
+    <div class="col-md-6">
+        <label for="firstName" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="firstName">
+    </div>
+    <div class="col-md-6">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="lastName">
+    </div>
+    <div class="col-md-6">
+        <label for="phoneNumber" class="form-label">Phone Number</label>
+        <input type="text" class="form-control" id="phoneNumber">
+    </div>
+    {{!-- Website links --}}
+    <div class="col-md-6">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email">
+    </div>
+    <div class="col-md-6">
+        <label for="tagline" class="form-label">Tagline</label>
+        <input type="text" class="form-control" id="tagline">
+    </div>
+    <div class="col-md-6">
+        <label for="linkedin" class="form-label">LinkedIn</label>
+        <input type="text" class="form-control" id="linkedin">
+    </div>
+    <div class="col-md-6">
+        <label for="github" class="form-label">Github</label>
+        <input type="text" class="form-control" id="github">
+    </div>
+    <div class="col-md-6">
+        <label for="website" class="form-label">Personal Website</label>
+        <input type="text" class="form-control" id="website">
+    </div>
+    <div class="col-md-4">
+        <label for="interests1" class="form-label">Personal Interests</label>
+        <input type="text" class="form-control" id="interests1">
+    </div>
+    <div class="col-md-4">
+        <label for="interests2" class="form-label">Personal Interests</label>
+        <input type="text" class="form-control" id="interests2">
+    </div>
+    <div class="col-md-4">
+        <label for="interests3" class="form-label">Personal Interests</label>
+        <input type="text" class="form-control" id="interests3">
+    </div>
+    {{!-- Select a picture --}}
+    <div class="col-md-6">
+        <label for="imagefile" accept="image/jpeg" id="imgaeFile">Current Photo</label>
+        <input type="file" name="imgfile" class="form-control">
+        <script src="/imageAPI/index.js"></script>
+
+    </div>
+
+    <div class="col-12 form-group">
+        <label for="careerSummary">Career Summary</label>
+        <textarea type="text" class="form-control" id="careerSummary" rows="3"></textarea>
+    </div>
+</form>
+
+
+<!-- Education Form-->
+<div class="mt-2 p-2">
+    <h3>Education</h3>
+</div>
+<!-- First Education form  -->
+<form class="col-12 mb-3 p-4 row g-3">
+    <div class="pb-4 col-md-6">
+        <label for="college1" class="form-label">College and Degree</label>
+        <input type="text" class="form-control" id="college1">
+    </div>
+    <div class="pb-4 col-md-6">
+        <label for="graduated1" class="form-label">Year Graduated</label>
+        <input type="text" class="form-control" id="graduated1">
+    </div>
+
+    <!-- Second education form -->
+    <div class="pb-4 col-md-6">
+        <label for="college2" class="form-label">College and Degree</label>
+        <input type="text" class="form-control" id="college2">
+    </div>
+    <div class="pb-4 col-md-6">
+        <label for="graduated2" class="form-label">Year Graduated</label>
+        <input type="text" class="form-control" id="graduated2">
+    </div>
+</form>
+
+
+
+<!-- Work History Form -->
+<div class="mt-2 pl-4">
+    <h3>Previous Work History</h3>
+</div>
+<form class="col-12 mb-3 p-4 row g-3">
+    <!-- First job input -->
+    <div class="col-md-4">
+        <label for="jobTitle1" class="form-label">Job Title</label>
+        <input type="text" class="form-control" id="jobTitle1">
+    </div>
+    <div class="col-md-4">
+        <label for="started1" class="form-label">Year Started</label>
+        <input type="text" class="form-control" id="started1">
+    </div>
+    <div class="col-md-4">
+        <label for="left1" class="form-label">Year Left</label>
+        <input type="text" class="form-control" id="left1">
+    </div>
+    <div class="pb-4 col-6 form-group">
+        <label for="jobDescription1">Job Description</label>
+        <textarea type="text" class="form-control" id="jobDescription1" rows="3"></textarea>
+    </div>
+    <div class="pb-4 col-6 form-group">
+        <label for="achievements1">Achievements</label>
+        <textarea type="text" class="form-control" id="achievements1" rows="3"></textarea>
+    </div>
+
+
+    <!-- Second job input -->
+
+    <div class="col-md-4">
+        <label for="jobTitle2" class="form-label">Job Title</label>
+        <input type="text" class="form-control" id="jobTitle2">
+    </div>
+    <div class="col-md-4">
+        <label for="started2" class="form-label">Year Started</label>
+        <input type="text" class="form-control" id="started2">
+    </div>
+    <div class="col-md-4">
+        <label for="left2" class="form-label">Year Left</label>
+        <input type="text" class="form-control" id="left2">
+    </div>
+    <div class="pb-4 col-6 form-group">
+        <label for="jobDescription2">Job Description</label>
+        <textarea type="text" class="form-control" id="jobDescription2" rows="3"></textarea>
+    </div>
+    <div class="pb-4 col-6 form-group">
+        <label for="achievements2">Achievements</label>
+        <textarea type="text" class="form-control" id="achievements2" rows="3"></textarea>
+    </div>
+
+    <!-- Third job input -->
+    <div class="col-md-4">
+        <label for="jobTitle3" class="form-label">Job Title</label>
+        <input type="text" class="form-control" id="jobTitle3">
+    </div>
+    <div class="col-md-4">
+        <label for="started3" class="form-label">Year Started</label>
+        <input type="text" class="form-control" id="started3">
+    </div>
+    <div class="col-md-4">
+        <label for="left3" class="form-label">Year Left</label>
+        <input type="text" class="form-control" id="left3">
+    </div>
+    <div class="pb-4 col-6 form-group">
+        <label for="jobDescription3">Job Description</label>
+        <textarea type="text" class="form-control" id="jobDescription3" rows="3"></textarea>
+    </div>
+    <div class="pb-4 col-6 form-group">
+        <label for="achievements3">Achievements</label>
+        <textarea type="text" class="form-control" id="achievements3" rows="3"></textarea>
+    </div>
+
+</form>
+
+{{!-- Coding languages --}}
+<form class="col-12 mb-2 p-4 row g-3">
     <div class="mt-2 pl-4">
-        <h3>Personal Information</h3>
+        <h3>Coding Languages You Know</h3>
     </div>
-
-    <form class="col-12 mb-3 p-4 row g-3">
-        <div class="col-md-6">
-            <label for="firstName" class="form-label">First Name</label>
-            <input type="text" class="form-control" id="firstName">
-        </div>
-        <div class="col-md-6">
-            <label for="lastName" class="form-label">Last Name</label>
-            <input type="text" class="form-control" id="inputPassword4">
-        </div>
-        <div class="col-md-6">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email">
-        </div>
-        <div class="col-md-6">
-            <label for="phoneNumber" class="form-label">Phone Number</label>
-            <input type="text" class="form-control" id="phoneNumber">
-        </div>
-
-        <div class="col-md-6">
-            <label for="imagefile" accept="image/jpeg" id="imgaeFile">Current Photo</label>
-            <input type="file" name="imgfile" class="form-control">
-            <script src="/imageAPI/index.js" ></script> 
-
-        </div>
-        {{!-- Select a picture --}}
-        <div class="col-12 form-group">
-            <label for="careerSummary">Career Summary</label>
-            <textarea type="text" class="form-control" id="careerSummary" rows="3"></textarea>
-        </div>
-    </form>
-
-
-    <!-- Education Form-->
-    <div class="mt-2 p-2">
-        <h3>Education</h3>
+    <div class="col-md-4">
+        <label for="lang1" class="form-label"></label>
+        <input type="text" class="form-control" id="lang1">
     </div>
-    <!-- First Education form  -->
-    <form class="col-12 mb-3 p-4 row g-3">
-        <div class="pb-4 col-md-4">
-            <label for="collegeName1" class="form-label">College</label>
-            <input type="text" class="form-control" id="collegeName1">
-        </div>
-        <div class="pb-4 col-md-4">
-            <label for="degree1" class="form-label">Degree</label>
-            <input type="text" class="form-control" id="degree1">
-        </div>
-        <div class="pb-4 col-md-4">
-            <label for="graduated1" class="form-label">Year Graduated</label>
-            <input type="text" class="form-control" id="graduated1">
-        </div>
-
-        <!-- Second education form -->
-        <div class="pb-4 col-md-4">
-            <label for="collegeName2" class="form-label">College</label>
-            <input type="text" class="form-control" id="collegeName2">
-        </div>
-        <div class="pb-4 col-md-4">
-            <label for="degree2" class="form-label">Degree</label>
-            <input type="text" class="form-control" id="degree2">
-        </div>
-        <div class="pb-4 col-md-4">
-            <label for="graduated2" class="form-label">Year Graduated</label>
-            <input type="text" class="form-control" id="graduated2">
-        </div>
-
-        <!-- High school form -->
-        <div class="col-md-4">
-            <label for="highSchool1" class="form-label">High School Name</label>
-            <input type="text" class="form-control" id="highSchool1">
-        </div>
-        <div class="col-md-4">
-            <label for="graduated3" class="form-label">Year Graduated</label>
-            <input type="text" class="form-control" id="graduated3">
-        </div>
-        <div class="col-md-4">
-            <label for="graduated1" class="form-label">Achievements</label>
-            <input type="text" class="form-control" id="graduated1">
-        </div>
-    </form>
-
-
-
-    <!-- Work History Form -->
-    <div class="mt-2 pl-4">
-        <h3>Previous Work History</h3>
+     <div class="col-md-4">
+        <label for="lang2" class="form-label"></label>
+        <input type="text" class="form-control" id="lang2">
     </div>
-    <form class="col-12 mb-3 p-4 row g-3">
-        <!-- First job input -->
-        <div class="col-md-4">
-            <label for="jobTitle1" class="form-label">Job Title</label>
-            <input type="text" class="form-control" id="jobTitle1">
-        </div>
-        <div class="col-md-3">
-            <label for="dateEmployed1" class="form-label">Dates Employed</label>
-            <input type="date" class="form-control" id="dateEmployed1">
-        </div>
-        <div class="col-md-3">
-            <label for="dateEmployed1" class="form-label">Dates Employed</label>
-            <input type="date" class="form-control" id="dateEmployed1">
-        </div>
-        <div class="mt-4 col 2 form-group form-check">
-            <input type="checkbox" class="form-check-input" id="currentJob1">
-            <label class="form-check-label" for="currentJob1">Current Job</label>
-        </div>
-        <div class="pb-4 col-6 form-group">
-            <label for="jobDescription1">Job Description</label>
-            <textarea type="text" class="form-control" id="jobDescription1" rows="3"></textarea>
-        </div>
-        <div class="pb-4 col-6 form-group">
-            <label for="achievements1">Achievements</label>
-            <textarea type="text" class="form-control" id="achievements1" rows="3"></textarea>
-        </div>
-
-
-        <!-- Second job input -->
-
-        <div class="col-md-4">
-            <label for="jobTitle2" class="form-label">Job Title</label>
-            <input type="text" class="form-control" id="jobTitle2">
-        </div>
-        <div class="col-md-3">
-            <label for="dateEmployed2" class="form-label">Dates Employed</label>
-            <input type="date" class="form-control" id="dateEmployed2">
-        </div>
-        <div class="col-md-3">
-            <label for="dateEmployed2" class="form-label">Dates Employed</label>
-            <input type="date" class="form-control" id="dateEmployed2">
-        </div>
-        <div class="mt-4 col 2 form-group form-check">
-            <input type="checkbox" class="form-check-input" id="currentJob2">
-            <label class="form-check-label" for="currentJob2">Current Job</label>
-        </div>
-        <div class="pb-4 col-6 form-group">
-            <label for="jobDescription2">Job Description</label>
-            <textarea type="text" class="form-control" id="jobDescription2" rows="3"></textarea>
-        </div>
-        <div class="pb-4 col-6 form-group">
-            <label for="achievements2">Achievements</label>
-            <textarea type="text" class="form-control" id="achievements2" rows="3"></textarea>
-        </div>
-
-        <!-- Third job input -->
-        <div class="col-md-4">
-            <label for="jobTitle3" class="form-label">Job Title</label>
-            <input type="text" class="form-control" id="jobTitle3">
-        </div>
-        <div class="col-md-3">
-            <label for="dateEmployed3" class="form-label">Dates Employed</label>
-            <input type="date" class="form-control" id="dateEmployed3">
-        </div>
-        <div class="col-md-3">
-            <label for="dateEmployed3" class="form-label">Dates Employed</label>
-            <input type="date" class="form-control" id="dateEmployed3">
-        </div>
-        <div class="mt-4 col 2 form-group form-check">
-            <input type="checkbox" class="form-check-input" id="currentJob3">
-            <label class="form-check-label" for="currentJob3">Current Job</label>
-        </div>
-        <div class="pb-4 col-6 form-group">
-            <label for="jobDescription3">Job Description</label>
-            <textarea type="text" class="form-control" id="jobDescription3" rows="3"></textarea>
-        </div>
-        <div class="pb-4 col-6 form-group">
-            <label for="achievements3">Achievements</label>
-            <textarea type="text" class="form-control" id="achievements3" rows="3"></textarea>
-        </div>
-
-    </form>
-
-
-    <!-- Awards/Certifications -->
-    <div class="mt-2 pl-4">
-        <h3>Awards/Certifications</h3>
+     <div class="col-md-4">
+        <label for="lang3" class="form-label"></label>
+        <input type="text" class="form-control" id="lang3">
     </div>
-    <form class="col-12 mb-3 p-4 row g-3">
-        <!-- Award/certification description form -->
-        <div class="col-md-6">
-            <label for="awardCert1" class="form-label">Award/Certification Name</label>
-            <input type="text" class="form-control" id="awardCert1">
-        </div>
-        <div class="col-md-6">
-            <label for="desript1" class="form-label">Award/Certification Description</label>
-            <input type="text" class="form-control" id="desript1">
-        </div>
-        <!-- Second award/certification form -->
-        <div class="col-md-6">
-            <label for="awardCert2" class="form-label">Award/Certification Name</label>
-            <input type="text" class="form-control" id="awardCert2">
-        </div>
-        <div class="col-md-6">
-            <label for="desript2" class="form-label">Award/Certification Description</label>
-            <input type="text" class="form-control" id="desript2">
-        </div>
-        <!-- Third award/certification form -->
-        <div class="col-md-6">
-            <label for="awardCert3" class="form-label">Award/Certification Name</label>
-            <input type="text" class="form-control" id="awardCert3">
-        </div>
-        <div class="col-md-6">
-            <label for="desript3" class="form-label">Award/Certification Description</label>
-            <input type="text" class="form-control" id="desript3">
-        </div>
-    </form>
+     <div class="col-md-4">
+        <label for="lang4" class="form-label"></label>
+        <input type="text" class="form-control" id="lang4">
+    </div>
+     <div class="col-md-4">
+        <label for="lang5" class="form-label"></label>
+        <input type="text" class="form-control" id="lang5">
+    </div>
+     <div class="col-md-4">
+        <label for="lang6" class="form-label"></label>
+        <input type="text" class="form-control" id="lang6">
+    </div>
+</form>
 
-    <form class="ml-3 col-12 mb-3 p-4 row g-3">
-        <a href="/resume" class="btn col-4 btn-primary" >Submit</a>
-    </form>
+
+<!-- Project form -->
+<div class="mt-2 pl-4">
+    <h3>Projects</h3>
+</div>
+<form class="col-12 mb-3 p-4 row g-3">
+    <!-- Project form description form -->
+    <div class="col-md-6">
+        <label for="projectName1" class="form-label">Project Name</label>
+        <input type="text" class="form-control" id="projectName1">
+    </div>
+    <div class="col-md-6">
+        <label for="projectLink1" class="form-label">Project Link</label>
+        <input type="text" class="form-control" id="projectLink1">
+    </div>
+    <div class="col-12 form-group">
+        <label for="projectDescript1">Project Description</label>
+        <textarea type="text" class="form-control" id="projectDescript1" rows="3"></textarea>
+    </div>
+    <!-- Second project form -->
+    <div class="col-md-6">
+        <label for="projectName2" class="form-label">Project Name</label>
+        <input type="text" class="form-control" id="projectName2">
+    </div>
+    <div class="col-md-6">
+        <label for="projectLink2" class="form-label">Project Link</label>
+        <input type="text" class="form-control" id="projectLink2">
+    </div>
+    <div class="col-12 form-group">
+        <label for="projectDescript2">Project Description</label>
+        <textarea type="text" class="form-control" id="projectDescript2" rows="3"></textarea>
+    </div>
+    <!-- Third project form -->
+    <div class="col-md-6">
+        <label for="projectName3" class="form-label">Project Name</label>
+        <input type="text" class="form-control" id="projectName3">
+    </div>
+    <div class="col-md-6">
+        <label for="projectLink3" class="form-label">Project Link</label>
+        <input type="text" class="form-control" id="projectLink3">
+    </div>
+    <div class="col-12 form-group">
+        <label for="projectDescript3">Project Description</label>
+        <textarea type="text" class="form-control" id="projectDescript3" rows="3"></textarea>
+    </div>
+</form>
+
+<form class="ml-3 col-12 mb-3 p-4 row g-3">
+    <a href="/resume" class="btn col-4 btn-primary">Submit</a>
+</form>
