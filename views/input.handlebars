@@ -3,6 +3,7 @@
 </main>
 
 
+
 <!-- Personal Information Form -->
 <div class="mt-2 pl-4">
     <h3>Personal Information</h3>
@@ -174,6 +175,184 @@
 
 {{!-- Coding languages --}}
 <form class="col-12 mb-2 p-4 row g-3">
+=======
+    <!-- Personal Information Form -->
+    <div class="mt-2 pl-4">
+        <h3>Personal Information</h3>
+    </div>
+
+    <form class="col-12 mb-3 p-4 row g-3">
+        <div class="col-md-6">
+            <label for="firstName" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="firstName">
+        </div>
+        <div class="col-md-6">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="inputPassword4">
+        </div>
+        <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email">
+        </div>
+        <div class="col-md-6">
+            <label for="phoneNumber" class="form-label">Phone Number</label>
+            <input type="text" class="form-control" id="phoneNumber">
+        </div>
+
+        <div class="col-md-6">
+            <label for="imagefile" accept="image/jpeg" id="imgaeFile">Current Photo</label>
+            <input type="file" name="imgfile" class="form-control">
+            <script src="../imageAPI/index.js" ></script> 
+
+        </div>
+        {{!-- Select a picture --}}
+        <div class="col-12 form-group">
+            <label for="careerSummary">Career Summary</label>
+            <textarea type="text" class="form-control" id="careerSummary" rows="3"></textarea>
+        </div>
+    </form>
+
+
+    <!-- Education Form-->
+    <div class="mt-2 p-2">
+        <h3>Education</h3>
+    </div>
+    <!-- First Education form  -->
+    <form class="col-12 mb-3 p-4 row g-3">
+        <div class="pb-4 col-md-4">
+            <label for="collegeName1" class="form-label">College</label>
+            <input type="text" class="form-control" id="collegeName1">
+        </div>
+        <div class="pb-4 col-md-4">
+            <label for="degree1" class="form-label">Degree</label>
+            <input type="text" class="form-control" id="degree1">
+        </div>
+        <div class="pb-4 col-md-4">
+            <label for="graduated1" class="form-label">Year Graduated</label>
+            <input type="text" class="form-control" id="graduated1">
+        </div>
+
+        <!-- Second education form -->
+        <div class="pb-4 col-md-4">
+            <label for="collegeName2" class="form-label">College</label>
+            <input type="text" class="form-control" id="collegeName2">
+        </div>
+        <div class="pb-4 col-md-4">
+            <label for="degree2" class="form-label">Degree</label>
+            <input type="text" class="form-control" id="degree2">
+        </div>
+        <div class="pb-4 col-md-4">
+            <label for="graduated2" class="form-label">Year Graduated</label>
+            <input type="text" class="form-control" id="graduated2">
+        </div>
+
+        <!-- High school form -->
+        <div class="col-md-4">
+            <label for="highSchool1" class="form-label">High School Name</label>
+            <input type="text" class="form-control" id="highSchool1">
+        </div>
+        <div class="col-md-4">
+            <label for="graduated3" class="form-label">Year Graduated</label>
+            <input type="text" class="form-control" id="graduated3">
+        </div>
+        <div class="col-md-4">
+            <label for="graduated1" class="form-label">Achievements</label>
+            <input type="text" class="form-control" id="graduated1">
+        </div>
+    </form>
+
+
+
+    <!-- Work History Form -->
+    <div class="mt-2 pl-4">
+        <h3>Previous Work History</h3>
+    </div>
+    <form class="col-12 mb-3 p-4 row g-3">
+        <!-- First job input -->
+        <div class="col-md-4">
+            <label for="jobTitle1" class="form-label">Job Title</label>
+            <input type="text" class="form-control" id="jobTitle1">
+        </div>
+        <div class="col-md-3">
+            <label for="dateEmployed1" class="form-label">Dates Employed</label>
+            <input type="date" class="form-control" id="dateEmployed1">
+        </div>
+        <div class="col-md-3">
+            <label for="dateEmployed1" class="form-label">Dates Employed</label>
+            <input type="date" class="form-control" id="dateEmployed1">
+        </div>
+        <div class="mt-4 col 2 form-group form-check">
+            <input type="checkbox" class="form-check-input" id="currentJob1">
+            <label class="form-check-label" for="currentJob1">Current Job</label>
+        </div>
+        <div class="pb-4 col-6 form-group">
+            <label for="jobDescription1">Job Description</label>
+            <textarea type="text" class="form-control" id="jobDescription1" rows="3"></textarea>
+        </div>
+        <div class="pb-4 col-6 form-group">
+            <label for="achievements1">Achievements</label>
+            <textarea type="text" class="form-control" id="achievements1" rows="3"></textarea>
+        </div>
+
+
+        <!-- Second job input -->
+
+        <div class="col-md-4">
+            <label for="jobTitle2" class="form-label">Job Title</label>
+            <input type="text" class="form-control" id="jobTitle2">
+        </div>
+        <div class="col-md-3">
+            <label for="dateEmployed2" class="form-label">Dates Employed</label>
+            <input type="date" class="form-control" id="dateEmployed2">
+        </div>
+        <div class="col-md-3">
+            <label for="dateEmployed2" class="form-label">Dates Employed</label>
+            <input type="date" class="form-control" id="dateEmployed2">
+        </div>
+        <div class="mt-4 col 2 form-group form-check">
+            <input type="checkbox" class="form-check-input" id="currentJob2">
+            <label class="form-check-label" for="currentJob2">Current Job</label>
+        </div>
+        <div class="pb-4 col-6 form-group">
+            <label for="jobDescription2">Job Description</label>
+            <textarea type="text" class="form-control" id="jobDescription2" rows="3"></textarea>
+        </div>
+        <div class="pb-4 col-6 form-group">
+            <label for="achievements2">Achievements</label>
+            <textarea type="text" class="form-control" id="achievements2" rows="3"></textarea>
+        </div>
+
+        <!-- Third job input -->
+        <div class="col-md-4">
+            <label for="jobTitle3" class="form-label">Job Title</label>
+            <input type="text" class="form-control" id="jobTitle3">
+        </div>
+        <div class="col-md-3">
+            <label for="dateEmployed3" class="form-label">Dates Employed</label>
+            <input type="date" class="form-control" id="dateEmployed3">
+        </div>
+        <div class="col-md-3">
+            <label for="dateEmployed3" class="form-label">Dates Employed</label>
+            <input type="date" class="form-control" id="dateEmployed3">
+        </div>
+        <div class="mt-4 col 2 form-group form-check">
+            <input type="checkbox" class="form-check-input" id="currentJob3">
+            <label class="form-check-label" for="currentJob3">Current Job</label>
+        </div>
+        <div class="pb-4 col-6 form-group">
+            <label for="jobDescription3">Job Description</label>
+            <textarea type="text" class="form-control" id="jobDescription3" rows="3"></textarea>
+        </div>
+        <div class="pb-4 col-6 form-group">
+            <label for="achievements3">Achievements</label>
+            <textarea type="text" class="form-control" id="achievements3" rows="3"></textarea>
+        </div>
+
+    </form>
+
+
+    <!-- Awards/Certifications -->
+
     <div class="mt-2 pl-4">
         <h3>Coding Languages You Know</h3>
     </div>

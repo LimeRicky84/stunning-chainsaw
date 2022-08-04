@@ -8,7 +8,7 @@ const loginFormHandler = async (event) => {
 
    if (email && password) {
     // Send a POST request to the API endpoint
-    const response = await fetch('/api/dashboard/login', {
+    const response = await fetch('/dash/login', {
       method: 'POST',
       body: JSON.stringify({ email, password }),
       headers: { 'Content-Type': 'application/json' },
@@ -35,7 +35,7 @@ const signupFormHandler = async (event) => {
 
   if (first_name && last_name && email && password) {
 
-    const response = await fetch('/api/dashboard/signup', {
+    const response = await fetch('/dash/signup', {
       method: 'POST',
       body: JSON.stringify({ first_name, last_name, contact_info, email, password }),
       headers: { 'Content-Type': 'application/json' },
