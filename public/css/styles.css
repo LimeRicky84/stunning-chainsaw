@@ -69,12 +69,14 @@ header {
   header {
     text-align: center;
     
+    
   }
 
   section {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: aqua;
     
    
   }
