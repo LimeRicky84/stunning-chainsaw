@@ -55,14 +55,16 @@ header {
 
 #templates  a{
 
- flex-basis: 65%;
+ flex-basis: 31%;
  border: 3px solid rgb(155, 147, 147);
  margin: 1%;
  
 }
 
  #templates {
-  justify-content: space-evenly;
+  
+  display: flex;
+  flex-wrap: wrap;
  }
 
 #logout:hover {
@@ -103,9 +105,17 @@ header {
     
     
   }
+
+  #templates {
+  
+    display: flex;
+    flex-wrap: wrap;
+   }
 }
 
 @media screen and (max-width: 768px ) {
+
+ 
   
   header {
     text-align: center;
@@ -128,6 +138,22 @@ header {
     text-align: center;
     
   }
+
+  #templates {
+  
+    display: flex;
+    flex-wrap: wrap;
+   }
+
+   #templates  a{
+
+    flex-basis: 65%;
+    border: 3px solid rgb(155, 147, 147);
+    margin: 1%;
+    
+   }
+
+   
 }
 
 @media screen and (max-width: 991.98px) {
@@ -163,4 +189,38 @@ header {
     
   }
 
+  #templates {
+  
+    display: flex;
+    flex-wrap: wrap;
+   }
+
+   #templates  a{
+
+    flex-basis: 65%;
+    border: 3px solid rgb(155, 147, 147);
+    margin: 1%;
+    
+   }
+   
+
 }
+
+@media screen and (max-width: 1400px) {
+
+  #templates {
+
+    display: flex;
+    flex-wrap: wrap;
+   }
+
+   #templates  a{
+
+    flex-basis: 65%;
+    border: 3px solid rgb(155, 147, 147);
+    margin: 1%;
+    
+   }
+
+  
+ }
