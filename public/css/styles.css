@@ -63,14 +63,20 @@ header {
 }
 
 #templates  a{
- display: flex;
- flex-basis: 75%;
+
+ flex-basis: 65%;
  border: 3px solid rgb(155, 147, 147);
  margin: 1%;
-
-
-
 }
+
+ #templates {
+  flex-wrap: wrap;
+  
+ }
+
+
+
+
 
 
 @media screen and (max-width: 576px) {
