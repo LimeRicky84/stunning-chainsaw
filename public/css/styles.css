@@ -36,16 +36,7 @@ button:hover {
   background-image: url(/images/resumetemplate3.png);
 }
 
-.red {
-  font-size: small;
-  color: crimson;
-}
 
-.btn:hover {
-  background-color: rgb(168, 195, 185);
-  transition: 0.7s;
-  
-}
 
 #login {
 
@@ -67,11 +58,11 @@ header {
  flex-basis: 65%;
  border: 3px solid rgb(155, 147, 147);
  margin: 1%;
+ 
 }
 
  #templates {
-  flex-wrap: wrap;
-  
+  justify-content: space-evenly;
  }
 
 #logout:hover {
