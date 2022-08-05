@@ -12,6 +12,10 @@ Dependencies can be installed using the <code>npm i</code> command.
 
 Navigate the page, create an account, fill out the forms and use/modify the resulting resume however you like.
 
+## APPLICATION SCREEN SHOT
+![Alt text](screenshot1.PNG)
+![Alt text](screenshot2.PNG)
+
 ## Contributors
 
 This application was a collaborative effort, built by the following students and our github links:
