@@ -5,14 +5,14 @@ const sequelize = require('../config/connection');
 class User extends Model {
     async checkPassword(loginPw) {
       try {
-        // const salt = await bcrypt.genSalt(10)
-        // const hash = await bcrypt.hash(loginPw, salt)
-        // console.log(loginPw)
-        // console.log(this.password)
-        // const compared = await bcrypt.compare(loginPw, this.password);
-        // console.log(compared)
-        // return compared
-        return true
+        const salt = await bcrypt.genSalt(10)
+        const hash = await bcrypt.hash(loginPw, salt)
+        console.log(loginPw)
+        console.log(this.password)
+        const compared = await bcrypt.compare(loginPw, this.password);
+        console.log(compared)
+        return compared
+        // return true
       }catch (err) {
       console.log(err)
     
